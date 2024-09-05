@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mostrar Persona</title>
+        <%= stylesheet_link_tag 'application', media:'all', 'data-turbolinks-track':'reload' %>
+    </head>
+    <body>
+        <h1>Segundo Controlador</h1>
+        <h2>Hashes</h2>
+        <table class="persona-table">
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>  
+            <tbody>
+                <% @persona.each do |campo, valor| %>
+                <tr>
+                    <td>
+                        <%= campo.to_s.capitalize%>
+                    </td>
+                    <td>
+                        <%= valor %>
+                    </td>    
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </body>
+</html>
